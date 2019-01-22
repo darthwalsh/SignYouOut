@@ -14,6 +14,8 @@ namespace SignYouOut
     {
         public static void Main(string[] args)
         {
+            // I would use a semaphore to ensure only one instance is running,
+            // but listening on a fixed port does the same job
             CreateWebHostBuilder(args).Build().Run();
         }
 
