@@ -14,9 +14,7 @@ namespace SignYouOut.Controllers
         [HttpPost]
         public void Post()
         {
-            Process.Start("cmd.exe", "/l"); //TODO shutdown.exe /l
-            //TODO listen only on localhost interface, not external
-            //TODO document how to set it up
+            Process.Start("shutdown.exe", "/l"); // logoff
         }
     }
 }
