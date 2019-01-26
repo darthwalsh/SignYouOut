@@ -4,6 +4,18 @@ SignYouOut is a simple Windows app that logs out other users using [Cassia](http
 
 This is useful when you have two people using the same computer, and you want to sign them out automatically when you log in.
 
+## Set up
+Build and copy SignYouOut.exe somewhere stable on your computer like %PROGRAMDATA%.
+
+On your account, create a Scheduled Task:
+
+- Run with highest privileges (you need admin permission to sign out other users)
+- Triggered when your account logs in, or unlocks, or when your user connects to user session remotely
+- Run `powershellw.exe` with args `-c C:\ProgramData\SignYouOut\SignYouOut.exe`
+
+Don't use "Run whether user is logged on or not" to avoid creating visible console window, as that will break the session comparison and sign **you** out too!
+Use [Vittel/RunHiddenConsole](https://github.com/Vittel/RunHiddenConsole) to compile `powershellw.exe`.
+
 ## Other strategies
 
 [Most](https://gallery.technet.microsoft.com/scriptcenter/Get-UserSessions-Parse-b4c97837)
