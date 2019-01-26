@@ -5,7 +5,7 @@ SignYouOut is a simple Windows app that logs out other users using [Cassia](http
 This is useful when you have two people using the same computer, and you want to sign them out automatically when you log in.
 
 ## Set up
-Build and copy SignYouOut.exe somewhere stable on your computer like %PROGRAMDATA%.
+Extract the [release](../../releases/latest) somewhere stable on your computer like %PROGRAMDATA%.
 
 On your account, create a Scheduled Task:
 
